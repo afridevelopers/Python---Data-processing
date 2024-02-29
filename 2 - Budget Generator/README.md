@@ -13,4 +13,6 @@ This Python project offers an efficient solution for the automated generation of
 3. The program will automatically calculate the total project value.
 4. A PDF file will be generated, providing an organized and professional preview of the budget.
 
+FRONT + BACKEND 
+
 This project is a practical solution to automate the budget creation process, saving time and ensuring accuracy in calculations. Ideal for professionals looking to streamline project management and deliver a professional presentation to clients.
