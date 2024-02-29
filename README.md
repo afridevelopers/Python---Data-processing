@@ -1,2 +1,6 @@
-# Python---Data-processing
-Set of Codes to carry out types of data processing
+Set of Codes to perform types of data processing, feel free to include projects, please follow the folder pattern for better organization
+
+0 - CSVtoTXT - Data Manipulation Python Script
+1 - 
+2 - 
+3 - 
