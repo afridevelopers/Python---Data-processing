@@ -3,11 +3,13 @@ from fpdf import FPDF
 import webbrowser
 
 def generate_quote():
+    # Retrieve input values from the GUI
     description = entry_description.get()
     estimated_hours = entry_hours.get()
     hourly_rate = entry_hourly_rate.get().replace(",", ".")  # Replace commas with dots
     deadline = entry_deadline.get()
 
+    # Calculate the total amount based on the input values
     total_amount = float(estimated_hours) * float(hourly_rate)
 
     # Generating PDF
@@ -23,6 +25,7 @@ def generate_quote():
     pdf.text(115, 190, deadline)
     pdf.text(115, 205, str(total_amount))
 
+    # Define the path for the generated PDF
     pdf_file_path = "Quote.pdf"
     pdf.output(pdf_file_path)
     print("Quote generated successfully")
@@ -37,6 +40,7 @@ root.title("Quote Generator")
 # Increasing the window size
 root.geometry("600x400")
 
+# Labels and Entry widgets for user input
 label_description = Label(root, text="Project description:", font=("Arial", 12))
 label_description.grid(row=0, column=0, pady=10, padx=10)
 entry_description = Entry(root, font=("Arial", 12))
@@ -57,7 +61,9 @@ label_deadline.grid(row=3, column=0, pady=10, padx=10)
 entry_deadline = Entry(root, font=("Arial", 12))
 entry_deadline.grid(row=3, column=1, pady=10, padx=10)
 
+# Button to trigger the quote generation
 button_generate = Button(root, text="Generate Quote", command=generate_quote, font=("Arial", 12))
 button_generate.grid(row=4, columnspan=2, pady=20)
 
+# Start the GUI application
 root.mainloop()
